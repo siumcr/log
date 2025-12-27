@@ -1,4 +1,7 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://stunning-pudding-df6237.netlify.app/'
 languageCode = 'ko-kr'
-title = 'My New Hugo Site'
-theme = 'hugo-PaperMod'
+title = '내 블로그'
+theme = 'hugo-PaperMod' # themes 폴더 안의 실제 폴더명과 대소문자까지 일치해야 함
+
+[params]
+    env = 'production' # 개발 모드가 아닌 프로덕션 모드로 설정

@@ -4,8 +4,8 @@ content:
     type: collection
     path: content/posts
     format: md
-    # filename 규칙을 단순화합니다.
-    filename: "{title}" 
+    # 2025년 버전에서는 파일명 생성 규칙이 명확해야 저장 오류가 안 납니다.
+    filename: "{year}-{month}-{day}-{title}" 
     fields:
       - name: title
         label: 제목
