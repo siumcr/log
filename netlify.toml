@@ -1,0 +1,6 @@
+[build]
+  command = "hugo --gc --minify"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.153.3" # 아까 확인한 본인의 버전으로 수정하세요.
