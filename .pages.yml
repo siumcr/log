@@ -6,7 +6,6 @@ content:
     format: md
     # 2025 최신 방식: 변수 앞에 $를 붙이거나 시스템 자동 생성을 권장합니다.
     # 만약 아래 방식도 문자로 저장된다면 이 줄을 아예 삭제하세요.
-    filename: "$date-$title"
     fields:
       - name: title
         label: 제목
