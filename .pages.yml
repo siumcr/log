@@ -4,10 +4,17 @@ content:
     type: collection
     path: content/posts
     format: md
+    # filename 규칙을 단순화합니다.
+    filename: "{title}" 
     fields:
       - name: title
         label: 제목
         type: string
+        required: true
+      - name: date
+        label: 날짜
+        type: datetime
+        default: now
       - name: body
         label: 본문
         type: rich-text
