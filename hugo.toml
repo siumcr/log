@@ -5,3 +5,5 @@ theme = 'hugo-PaperMod' # themes 폴더 안의 실제 폴더명과 대소문자�
 
 [params]
     env = 'production' # 개발 모드가 아닌 프로덕션 모드로 설정
+    showFullContents = true
+    displayFullPost = true
