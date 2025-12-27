@@ -7,7 +7,7 @@ content:
     label: 블로그 포스트
     type: collection
     path: content/posts
-    filename: "{date:YYYY-MM-DD}-{slug}"
+    filename: "{date:YYYY-MM-DD}-{fields.title}"  # {slug} → {fields.title}로 변경
     fields:
       - name: title
         label: 제목
