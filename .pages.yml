@@ -4,8 +4,9 @@ content:
     type: collection
     path: content/posts
     format: md
-    # 중괄호 두 개를 사용해 보세요. 이것이 최신 표준입니다.
-    filename: "{{year}}-{{month}}-{{day}}-{{title}}"
+    # 2025 최신 방식: 변수 앞에 $를 붙이거나 시스템 자동 생성을 권장합니다.
+    # 만약 아래 방식도 문자로 저장된다면 이 줄을 아예 삭제하세요.
+    filename: "$date-$title"
     fields:
       - name: title
         label: 제목
@@ -20,5 +21,5 @@ content:
         type: boolean
         default: false
       - name: body
-        label: 본문
+        label: 본문 내용
         type: rich-text
