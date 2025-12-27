@@ -16,10 +16,6 @@ content:
         label: 날짜
         type: datetime
         default: now
-      - name: draft
-        label: 초안
-        type: boolean
-        default: false
       - name: body
         label: 본문
         type: rich-text
