@@ -1,4 +1,4 @@
-baseURL = '/'
+baseURL = 'https://stunning-pudding-df6237.netlify.app/'
 languageCode = 'ko-kr'
 title = 'My New Hugo Site'
 theme = 'hugo-PaperMod'
