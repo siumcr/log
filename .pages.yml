@@ -1,21 +1,25 @@
+# 저장소 최상위 루트의 .pagescms.yml 내용
 content:
   - name: Posts
+    label: 블로그 포스트
     type: collection
     path: content/posts
     format: md
-    filename: "{year}-{month}-{day}-{title}" # 파일명에 제목이 포함되도록 설정
+    # 파일이 생성될 때의 규칙입니다.
+    filename: "{year}-{month}-{day}-{slug}"
     fields:
       - name: title
-        type: string
         label: 제목
-        required: true # 제목을 필수로 입력하게 설정
+        type: string
+        required: true
       - name: date
-        type: datetime
         label: 날짜
+        type: datetime
+        default: now
       - name: draft
+        label: 초안
         type: boolean
-        label: 초안 여부
         default: false
       - name: body
-        type: rich-text
         label: 본문
+        type: rich-text
