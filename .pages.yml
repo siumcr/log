@@ -1,0 +1,19 @@
+content:
+  - name: Posts
+    type: collection
+    path: content/posts
+    format: md
+    fields:
+      - name: title
+        type: string
+        label: 제목
+      - name: date
+        type: datetime
+        label: 날짜
+      - name: draft
+        type: boolean
+        label: 초안 여부
+        default: false
+      - name: body
+        type: rich-text
+        label: 본문
