@@ -3,10 +3,12 @@ content:
     type: collection
     path: content/posts
     format: md
+    filename: "{year}-{month}-{day}-{title}" # 파일명에 제목이 포함되도록 설정
     fields:
       - name: title
         type: string
         label: 제목
+        required: true # 제목을 필수로 입력하게 설정
       - name: date
         type: datetime
         label: 날짜
