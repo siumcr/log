@@ -4,41 +4,26 @@ content:
     type: collection
     path: content/posts
     format: md
-    # 파일명을 '날짜-제목.md' 형식으로 생성하여 정렬을 최적화합니다.
-    filename: "{year}-{month}-{day}-{title}"
+    # {title}이 치환되지 않는다면 아래와 같이 'slug'를 활용하는 것이 가장 안전합니다.
+    filename: "{year}-{month}-{day}-{slug}" 
     fields:
       - name: title
         label: 제목
         type: string
         required: true
+      # slug 필드를 추가하면 파일명을 더 안정적으로 생성할 수 있습니다.
+      - name: slug
+        label: URL 슬러그 (파일명)
+        type: string
+        help: 영어와 대시(-)만 사용하세요 (예: my-first-post)
       - name: date
         label: 날짜
         type: datetime
         default: now
       - name: draft
-        label: 초안(Draft) 여부
+        label: 초안 여부
         type: boolean
-        default: false # false로 설정해야 저장하자마자 블로그에 보입니다.
-      - name: description
-        label: 요약 문구
-        type: string
-        help: 목록에서 제목 아래에 표시될 짧은 설명입니다.
-      - name: categories
-        label: 카테고리
-        type: list
-      - name: tags
-        label: 태그
-        type: list
-      - name: cover
-        label: 대표 이미지
-        type: object
-        fields:
-          - name: image
-            label: 이미지 경로
-            type: image
-          - name: alt
-            label: 이미지 설명(Alt)
-            type: string
+        default: false
       - name: body
         label: 본문 내용
         type: rich-text
