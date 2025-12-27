@@ -1,7 +1,0 @@
-[build]
-  command = "hugo --gc --minify"
-  publish = "public"
-
-[build.environment]
-  HUGO_VERSION = "0.140.0" # 자신의 버전으로 확인
-  HUGO_ENABLEGITINFO = "true"
