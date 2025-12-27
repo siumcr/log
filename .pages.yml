@@ -1,11 +1,11 @@
 content:
   - name: posts
-    label: 포스트
+    label: 블로그 포스트
     type: collection
     path: content/posts
     format: md
-    # 2025년 버전에서는 파일명 생성 규칙이 명확해야 저장 오류가 안 납니다.
-    filename: "{year}-{month}-{day}-{title}" 
+    # 파일명을 '날짜-제목.md' 형식으로 생성하여 정렬을 최적화합니다.
+    filename: "{year}-{month}-{day}-{title}"
     fields:
       - name: title
         label: 제목
@@ -15,6 +15,30 @@ content:
         label: 날짜
         type: datetime
         default: now
+      - name: draft
+        label: 초안(Draft) 여부
+        type: boolean
+        default: false # false로 설정해야 저장하자마자 블로그에 보입니다.
+      - name: description
+        label: 요약 문구
+        type: string
+        help: 목록에서 제목 아래에 표시될 짧은 설명입니다.
+      - name: categories
+        label: 카테고리
+        type: list
+      - name: tags
+        label: 태그
+        type: list
+      - name: cover
+        label: 대표 이미지
+        type: object
+        fields:
+          - name: image
+            label: 이미지 경로
+            type: image
+          - name: alt
+            label: 이미지 설명(Alt)
+            type: string
       - name: body
-        label: 본문
+        label: 본문 내용
         type: rich-text
